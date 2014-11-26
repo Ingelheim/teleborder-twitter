@@ -1,0 +1,33 @@
+<div ng-controller="FollowerController" ng-if="follower">
+	<%= render "alert" %>
+
+	<h3 class="page-message">See the followers two people have in common</h3>	
+
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 input-group">
+			<span class="input-group-addon">@</span>
+			<input type="text" class="form-control" placeholder="twitter handle, e.g. nemrow"
+			ng-model="twitterHandleA" autofocus>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 input-group">
+			<span class="input-group-addon">@</span>
+			<input type="text" class="form-control" placeholder="twitter handle, e.g. lukasingelheim"
+			ng-model="twitterHandleB" autofocus>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+
+	<h4 href="" class="page-message button" ng-click="getFollowers()">compare followers</h4>
+	
+	<h3 class="page-message" ng-if="loadingFollowers">Loading followers...</h3>
+	<p class="page-message" ng-if="loadingFollowers">Note that this might take a while!</p>
+	<div ng-if="followers">
+		<p class="line-container" ng-repeat="follower in followers track by $index">{{follower}}</p>
+	</div>
+</div>

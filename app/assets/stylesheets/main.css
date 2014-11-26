@@ -1,0 +1,30 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar{
+    background-color: #563D7C;
+}
+
+.navbar-item {
+	color: white;	
+}
+
+.teleborder_twitter, .teleborder_twitter:hover  {
+	color: white;
+}
+
+.page-message {
+	text-align: center;
+}
+
+.button {
+	cursor: pointer;
+}
+
+.line-container {
+	border-top: 1px dotted lightgray;
+	border-bottom: 1px dotted lightgray;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}

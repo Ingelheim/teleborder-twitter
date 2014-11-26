@@ -1,0 +1,22 @@
+<div ng-controller="TweetController" ng-if="tweets">
+	<%= render "alert" %>
+	<h3 class="page-message">Look up the latest tweets by entering a twitter handle</h3>	
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 input-group">
+			<span class="input-group-addon">@</span>
+			<input type="text" class="form-control" placeholder="your twitter handle, e.g. lukasingelheim"
+			ng-model="twitterHandle" autofocus>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+
+	<h4 href="" class="page-message button" ng-click="getTweets()">get tweets</h4>
+	
+	<h3 class="page-message" ng-if="loadingTweets">Loading tweets...</h3>
+	<p class="page-message" ng-if="loadingTweets">Note that this might take a while!</p>
+	<div ng-if="userTweets">
+		<p class="line-container" ng-repeat="tweet in userTweets track by $index">{{tweet}}</p>
+	</div>
+
+</div>

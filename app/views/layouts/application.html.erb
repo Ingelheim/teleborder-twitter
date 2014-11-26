@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeleborderTwitter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="teleborderTwitterApp" ng-cloak ng-controller="MainController">
+
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner" >
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand teleborder_twitter">Teleborder Twitter App</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="navbar-item" href="#" ng-click="goToTweets()">show tweets</a>
+                </li>
+                <li>
+                    <a class="navbar-item" href="#" ng-click="goToFollower()">compare follower</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+	<%= yield %>
+
+</body>
+</html>
